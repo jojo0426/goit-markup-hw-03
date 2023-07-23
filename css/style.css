@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap");
+
+:root {
+  --iris-color: #4d5ae5;
+  --navy-blue-color: #2e2f42;
+  --slate: #434455;
+  --white: #fff;
+  --cloud: #f4f4fd;
+  --cornflower: #e7e9fc;
+  --ocean: #404bbf;
+}
+
+/* ============this is the general style section================ */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: var(--slate);
+}
+
+.list {
+  list-style: none;
+}
+
+.logo-link {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 0;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  font-weight: 800;
+}
+
+.logo-link > span {
+  font-size: 18px;
+}
+
+.logo {
+  color: var(--iris-color, #4d5ae5);
+}
+
+.section-title {
+  color: var(--navy-blue-color);
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.17;
+}
+
+/* =======================this is navigation section=============== */
+
+.nav-menu .page:hover,
+.nav-menu .page:focus,
+.nav-menu .page.current,
+.contacts-menu .item:hover,
+.contacts-menu .item:focus {
+  color: var(--iris-color);
+}
+
+/* =====================this is the button section============ */
+
+.button {
+  border-color: transparent;
+  font-family: inherit;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+.button.primary {
+  color: white;
+  background-color: var(--iris-color);
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+}
+
+.button.primary:hover,
+.button.primary:focus {
+  background-color: var(--ocean);
+}
+/* =========================this is the webstudio logo================ */
+
+.studio {
+  color: var(--navy-blue-color);
+}
+
+.nav-menu .page {
+  color: var(--navy-blue-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.contacts-menu .item {
+  color: var(--slate);
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+/* ==============this is for the hero section========== */
+
+.bg-hero {
+  background-color: var(--navy-blue-color);
+}
+
+.hero-title {
+  color: var(--white, #fff);
+  text-align: center;
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.04em;
+}
+
+/* ==============this is for the section 1================ */
+
+.benefits .title {
+  color: var(--navy-blue-color);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.benefits .description {
+  color: var(--slate);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.71;
+}
+
+/* ===============this is section 3============== */
+
+.bg-team {
+  background-color: var(--cloud);
+}
+
+.team .name {
+  color: var(--navy-blue-color);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.team .position {
+  color: var(--slate);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* ===============this is the footer============= */
+
+.page-footer.bg-footer {
+  background-color: var(--navy-blue-color);
+}
+
+.studio-footer {
+  color: var(--cloud);
+}
+
+.footer-description {
+  color: var(--cloud);
+}
+/* ======================== portfolio========== */
+
+/* ------buttons------ */
+
+.button.filter {
+  background-color: var(--cloud);
+  color: var(--iris-color);
+  font-weight: 500;
+  line-height: 1.62;
+}
+
+.button.filter:hover,
+.button.filter:focus,
+.button.filter.current {
+  background-color: var(--ocean);
+  color: var(--cloud);
+}
+
+/* ============= this if for cards section ============ */
+
+.project .name {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--navy-blue-color);
+}
+
+.project .type {
+  color: var(--slate);
+  font-weight: 400;
+  line-height: 1.87;
+}
+
+.project {
+  text-decoration: none;
+}
