@@ -6,37 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
   </head>
   <body>
     <header class="page-header">
-      <nav>
-        <a href="./index.html" class="logo-link">
-          <span class="logo">WEB</span>
-          <span class="studio">STUDIO</span>
-        </a>
+      <div class="container menu-container">
+        <nav class="header-nav menu-container">
+          <a href="./index.html" class="logo-link">
+            <span class="logo">WEB</span>
+            <span class="studio">STUDIO</span>
+          </a>
 
-        <ul class="nav-menu list">
-          <li>
-            <a href="./index.html" class="page current">Studio</a>
-          </li>
-          <li>
-            <a href="./portfolio.html" class="page">Portfolio</a>
-          </li>
-          <li>
-            <a href="#contacts" class="page">Contacts</a>
-          </li>
-        </ul>
-      </nav>
-      <ul class="contacts-menu list">
-        <li>
-          <a href="mailto:info@devstudio.com" class="item">
-            info@devstudio.com</a
-          >
-        </li>
-        <li>
-          <a href="tel:+110001111111" class="item">+11 (000) 111-11-11</a>
-        </li>
-      </ul>
+          <ul class="nav-menu list">
+            <li>
+              <a href="./index.html" class="page current">Studio</a>
+            </li>
+            <li>
+              <a href="./portfolio.html" class="page">Portfolio</a>
+            </li>
+            <li>
+              <a href="#contacts" class="page">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="contacts-menu-container">
+          <ul class="contacts-menu list">
+            <li>
+              <a href="mailto:info@devstudio.com" class="item">
+                info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a href="tel:+110001111111" class="item">+11 (000) 111-11-11</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -53,7 +61,7 @@
       <section class="section">
         <div class="container">
           <ul class="benefits list">
-            <li>
+            <li class="section-item">
               <h3 class="title">Strategy</h3>
               <p class="description">
                 Our goal is to identify the business <br />
@@ -62,7 +70,7 @@
               </p>
             </li>
 
-            <li>
+            <li class="section-item">
               <h3 class="title">Punctuality</h3>
               <p class="description">
                 Bring the key message to the <br />
@@ -71,7 +79,7 @@
               </p>
             </li>
 
-            <li>
+            <li class="section-item">
               <h3 class="title">Diligence</h3>
               <p class="description">
                 Research and confirm brands that <br />
@@ -80,7 +88,7 @@
               </p>
             </li>
 
-            <li>
+            <li class="section-item">
               <h3 class="title">Technologies</h3>
               <p class="description">
                 Design practice focused on digital <br />
@@ -97,24 +105,27 @@
         <div class="container">
           <h2 class="section-title">What are we doing</h2>
           <ul class="what-we-do list">
-            <li>
+            <li class="what-we-do-item">
               <img
+                class="image"
                 src="./images/picture1.jpg"
                 alt="monitor"
                 width="360"
                 height="300"
               />
             </li>
-            <li>
+            <li class="what-we-do-item">
               <img
+                class="image"
                 src="./images/picture2.jpg"
                 alt="mobile"
                 width="360"
                 height="300"
               />
             </li>
-            <li>
+            <li class="what-we-do-item">
               <img
+                class="image"
                 src="./images/picture3.jpg"
                 alt="mobile with laptop"
                 width="360"
@@ -130,8 +141,9 @@
         <div class="container">
           <h2 class="section-title">Our Team</h2>
           <ul class="team list">
-            <li>
+            <li class="what-we-do-item list">
               <img
+                class="image"
                 src="./images/prod-design.jpg"
                 alt="Production Design photo"
                 width="270"
@@ -141,8 +153,9 @@
               <p class="position">Production Designer</p>
             </li>
 
-            <li>
+            <li class="what-we-do-item list">
               <img
+                class="image"
                 src="./images/front-end-dev.png"
                 alt="Front End Developer photo"
                 width="270"
@@ -152,8 +165,9 @@
               <p class="position">Frontend Developer</p>
             </li>
 
-            <li>
+            <li class="what-we-do-item list">
               <img
+                class="image"
                 src="./images/marketing.jpg"
                 alt="Marketing photo"
                 width="270"
@@ -163,8 +177,9 @@
               <p class="position">Marketing</p>
             </li>
 
-            <li>
+            <li class="what-we-do-item list">
               <img
+                class="image"
                 src="./images/user-interface.jpg"
                 alt="User Interface photo"
                 width="270"
@@ -179,7 +194,7 @@
     </main>
     <!--This is a footer-->
     <footer class="page-footer bg-footer">
-      <div>
+      <div class="container">
         <a href="./index.html" class="logo-link">
           <span class="logo">WEB</span>
           <span class="studio-footer">STUDIO</span>
