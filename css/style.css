@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"); */
 
 :root {
   --iris-color: #4d5ae5;
@@ -348,7 +348,6 @@ a {
   padding-left: 16px;
   margin-top: 0px;
   padding-top: 32px;
-  
 }
 
 .project .type {
@@ -357,7 +356,7 @@ a {
   padding-left: 16px;
   padding-bottom: 32px;
   margin-top: 0px;
-  }
+}
 
 .projects.list {
   display: flex;
@@ -375,5 +374,3 @@ a {
   border: 1px solid var(--cornflower);
   background: var(--white);
 }
-
-.type
