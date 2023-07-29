@@ -11,13 +11,33 @@
 }
 
 /* --------css margin reset--- */
-html,
-body {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
-  padding: 0;
 }
 
-ul {
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -29,31 +49,39 @@ body {
   font-size: 16px;
   letter-spacing: 0.03em;
   color: var(--slate);
+  background-color: var(--white);
 }
 
-a {
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-link {
   text-decoration: none;
 }
 
 .container {
   width: 1200px;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
-.image {
-  display: block;
-  height: auto;
+.menu,
+.navigation,
+.nav-menu,
+.contacts-menu {
+  display: flex;
+  align-items: center;
 }
 
 /* ---this is the header----- */
 .page-header {
-  display: flex;
-  margin-bottom: 24px;
+  /* display: flex;
+  margin-bottom: 24px; */
+  border-bottom: 1px solid var(--cornflower);
 }
+
 .navigation .item,
 .contacts-menu .item {
   display: inline;
@@ -83,27 +111,43 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 31px;
 }
 
 .nav-menu .page {
   color: var(--navy-blue-color);
-  padding: 40px;
+}
+
+.nav-menu {
+  margin-left: 93px;
+}
+
+.nav-menu .item:not(:last-child),
+.contacts-menu .item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .contacts-menu .contact {
   color: var(--slate);
+  font-weight: 400;
 }
 
 .contacts-menu.list {
   margin-left: auto;
 }
 
-.logo-link span {
+.logo-link > span {
   font-size: 18px;
+  line-height: 1.2;
+}
+
+.logo-link {
   font-family: "Raleway", sans-serif;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
   font-weight: 800;
+  font-size: 0;
 }
 
 .studio {
@@ -112,8 +156,6 @@ a {
 
 .navigation,
 .contacts-menu {
-  display: flex;
-  align-items: center;
   justify-content: center;
   gap: 40px;
   flex-shrink: 0;
@@ -130,9 +172,7 @@ a {
 
 /* ---this is for the hero section--- */
 .hero {
-  color: var(--white, #fff);
   text-align: center;
-  display: block;
   padding: 200px 0;
   background: var(--navy-blue-color);
 }
@@ -142,23 +182,19 @@ a {
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 0.04em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 48px;
+  color: var(--white);
+  margin-bottom: 30px;
 }
 
 .button {
-  display: block;
-  margin: auto;
   border-color: transparent;
   font-family: inherit;
   border-radius: 4px;
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5;
   letter-spacing: 0.03em;
   cursor: pointer;
-  padding: 16px 32px;
+  /* padding: 16px 32px; */
 }
 
 .button.primary {
@@ -166,11 +202,15 @@ a {
   background-color: var(--iris-color);
   line-height: 1.87;
   letter-spacing: 0.06em;
+  padding: 16px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .button.primary:hover,
 .button.primary:focus {
   background-color: var(--ocean);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px, 1px, 2px rgba(0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ---this is for the section 1 --- */
@@ -179,18 +219,28 @@ a {
   padding-bottom: 120px;
 }
 
+.section.no-top-padding {
+  padding-top: 0;
+}
+
 .benefits.list {
   display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.benefits .item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .benefits .title {
   color: var(--navy-blue-color);
   font-size: 20px;
   font-weight: 500;
-  font-style: normal;
-  line-height: 24px;
-  letter-spacing: 0.4px;
-  width: 264px;
+  line-height: 1.14;
   margin-bottom: 10px;
 }
 
@@ -199,7 +249,6 @@ a {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.71;
-  white-space: nowrap;
 }
 
 .section .item:not(:last-child) {
@@ -209,27 +258,47 @@ a {
 /* ---this is for sectioon 2 --- */
 .what-we-do.list {
   display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.what-we-do .item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .section-title {
-  margin-bottom: 72px;
+  margin-bottom: 50px;
   color: var(--navy-blue-color);
   text-align: center;
   font-size: 36px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 40px;
-  letter-spacing: 0.72px;
-  text-transform: capitalize;
+  line-height: 1.17;
 }
 
 /* ---this is for section 3 --- */
-.section.bg-team {
+/* .section.bg-team {
   text-align: center;
+} */
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .team .item {
   background-color: var(--white);
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px, 1px, 2px rgba(0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .section.bg-team {
@@ -240,26 +309,44 @@ a {
   display: flex;
 }
 
-.name.position {
-  padding: 0px;
-  color: var(--navy-blue-color);
-}
-.name {
-  margin-top: 30px;
-  margin-bottom: 8px;
+.team .name,
+.team .position {
+  line-height: 1.19;
+  text-align: center;
 }
 
-.position {
-  margin-bottom: 32px;
+/* .name .position {
+  padding: 0px;
+  color: var(--navy-blue-color);
+} */
+.team .name {
+  /* margin-top: 30px;
+  margin-bottom: 8px; */
+  color: var(--navy-blue-color);
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.team .position {
+  /* margin-bottom: 32px; */
   color: var(--slate);
+  font-size: 16px;
+  font-weight: 400;
 }
 
 /* ---this is for footer--- */
+.bg-footer {
+  background-color: var(--navy-blue-color);
+}
+
 .page-footer {
   padding: 60px 0;
-  height: 1.187;
-  flex-shrink: 0;
-  background-color: var(--navy-blue-color);
+}
+
+.logo-link.footer {
+  margin-bottom: 20px;
 }
 
 .footer-description {
@@ -268,8 +355,7 @@ a {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.32px;
+  line-height: 1.5;
 }
 
 .studio-footer {
@@ -278,21 +364,24 @@ a {
 
 /* ---this is for portfolio--- */
 .projects {
-  height: 2076px;
-  background: var(--white);
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.project-card {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .button.filter {
   padding: 6px 22px;
-  text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
   letter-spacing: 0.03em;
-  margin-top: 96px;
-  margin-bottom: 72px;
-  border-radius: 4px;
-  border: 1px solid var(--cornflower);
   background: var(--cloud);
   color: var(--iris-color);
 }
@@ -303,8 +392,8 @@ a {
   justify-content: center;
 }
 
-.space:not(:last-child) {
-  margin-right: 8px;
+.filters .space + .space {
+  margin-left: 8px;
 }
 
 .button.filter:hover,
@@ -312,6 +401,8 @@ a {
 .button.filter.current {
   background-color: var(--ocean);
   color: var(--cloud);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px, 1px, 2px rgba(0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .project .name {
@@ -319,17 +410,15 @@ a {
   font-weight: 500;
   letter-spacing: 0.04em;
   color: var(--navy-blue-color);
-  padding-left: 16px;
-  margin-top: 0px;
-  padding-top: 32px;
+  margin-bottom: 4px;
+  line-height: 2;
 }
 
 .project .type {
   color: var(--slate);
   font-weight: 400;
-  padding-left: 16px;
-  padding-bottom: 32px;
-  margin-top: 0px;
+  font-size: 16px;
+  line-height: 1.87;
 }
 
 .projects.list {
@@ -347,5 +436,6 @@ a {
 .substrate {
   border: 1px solid var(--cornflower);
   background: var(--white);
-  border-top: transparent;
+  border-top: 0;
+  padding: 20px 24px;
 }
